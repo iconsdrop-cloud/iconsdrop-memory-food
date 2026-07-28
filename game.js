@@ -72,7 +72,7 @@ function startGame(){
 
         card.innerHTML = `
 
-            <img src="images/${icon}" alt="icon">
+            <img src="${icon}" alt="icon">
 
         `;
 
