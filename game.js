@@ -212,6 +212,7 @@ function checkMatch(){
 
 if(firstCard.dataset.icon === secondCard.dataset.icon){
 
+        lock = true;
         firstCard.classList.add("matched");
         secondCard.classList.add("matched");
         matched += 2;
@@ -244,13 +245,10 @@ else if(combo >= 3){
 
 }
 
-comboSound.play();
-if(combo >= 1){
-
     comboSound.currentTime = 0;
     comboSound.play();
 
-}
+
         let bonusMoves = 0;
 
         if (combo >= 2) {
@@ -283,7 +281,11 @@ showBestNotification(combo);
 
 }
 
-        resetCards();
+        setTimeout(()=>{
+
+    resetCards();
+
+},300);
 
 
 
