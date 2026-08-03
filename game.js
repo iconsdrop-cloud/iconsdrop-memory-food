@@ -83,6 +83,8 @@ let round = 1;
 
 let gameOver = false;
 
+let resetTimer;
+
 const board = document.getElementById("game-board");
 
 
@@ -281,7 +283,7 @@ showBestNotification(combo);
 
 }
 
-        setTimeout(()=>{
+    resetTimer = setTimeout(()=>{
 
     resetCards();
 
@@ -532,7 +534,8 @@ function showComboNotification(points){
 }
 
 function nextRound(){
-   
+
+   clearTimeout(resetTimer);
     round++;
 
     document.getElementById("round").textContent = round;
