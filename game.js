@@ -277,9 +277,7 @@ if(combo > bestCombo){
     bestCombo = combo;
 
     localStorage.setItem("bestCombo", bestCombo);
-
-    document.getElementById("best-combo").textContent = bestCombo;
-showBestNotification(combo);
+    showBestNotification(combo);
 
 }
 
@@ -288,7 +286,6 @@ showBestNotification(combo);
     resetCards();
 
 },300);
-
 
 
 if (matched >= cards.length) {
