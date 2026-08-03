@@ -338,7 +338,7 @@ playWrongAnimation(secondCard);
 
             resetCards();
 if(availableMoves <= 0){
-
+ gameOver = true;
     const movesDisplay = document.getElementById("moves");
 
 movesDisplay.innerHTML = `
@@ -351,7 +351,7 @@ movesDisplay.innerHTML = `
 
     setTimeout(()=>{
 
-        gameOver = true;
+       
   gameOverSound.currentTime = 0;
         gameOverSound.play();
         endGame();
